@@ -1,0 +1,22 @@
+name: "jims-site"
+output_dir: "."
+navbar:
+  title: "Jim Kultgen"
+  left:
+    - text: "Home"
+      href: index.html
+    - text: "About"
+      href: about.html
+  right:
+    - icon: fa-github fa-lg
+      href: http://github.com/kultgenj
+    - icon: fa-twitter fa-lg
+      href: https://twitter.com/JimKultgen
+    - icon: fa-linkedin fa-lg
+      href: https://www.linkedin.com/in/jpkultgen/
+    - icon: fa-youtube-play fa-lg
+      href: https://www.youtube.com/channel/UC8I6bqCk7gO6YdoMz6W5fvw
+output:
+  html_document:
+    theme: flatly
+    css: style.css
