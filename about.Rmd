@@ -1,0 +1,7 @@
+---
+title: "About Me"
+---
+
+- __Name:__ Jim
+- __Ocupation:__ Analyst
+- __Hobbies:__ Reading about nerdy stuff. 

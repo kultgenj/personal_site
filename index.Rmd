@@ -1,0 +1,9 @@
+---
+  title: "Welcome to Jim's Adventures"
+---
+  
+<link rel="stylesheet" href="styles.css" type="text/css">
+
+<img src="kultgen_headshot.jpg" style="width:25%; border:10px solid; margin-right: 20px" align="left">
+
+This website is not yet ready for the public.  Kudos to you if you found it already.
