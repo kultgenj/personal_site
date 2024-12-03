@@ -7,6 +7,8 @@ navbar:
       href: index.html
     - text: "About"
       href: about.html
+    - text: "AutoOff"
+      href: AutoOff.html
   right:
     - icon: fa-github fa-lg
       href: http://github.com/kultgenj
