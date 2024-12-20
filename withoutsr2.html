@@ -3,7 +3,16 @@
 <html>
 
 <head>
-<script src="https://cdn.amplitude.com/script/87db0c1720c19e1b5dd8912b7b8f1264.js"></script><script>window.amplitude.init('87db0c1720c19e1b5dd8912b7b8f1264', {"fetchRemoteConfig":false,"autocapture":false});</script>
+<script src="https://cdn.amplitude.com/script/87db0c1720c19e1b5dd8912b7b8f1264.js"></script><script>window.amplitude.init('87db0c1720c19e1b5dd8912b7b8f1264', {
+  autocapture: {
+    attribution: true,
+    pageViews: true,
+    sessions: false,
+    formInteractions: true,
+    fileDownloads: true,
+    elementInteractions: true,
+  }
+});</script>
 <meta charset="utf-8" />
 <meta name="generator" content="pandoc" />
 <meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
