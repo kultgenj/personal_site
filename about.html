@@ -13,8 +13,9 @@
     elementInteractions: true,
   }
 });
-var jimTest = new amplitude.Identify().set('bot', '_jim');
-  amplitude.getInstance().identify(jimTest);
+const identifyEvent = new amplitude.Identify();
+identifyEvent.set('location', 'LA'); 
+amplitude.identify(identifyEvent);
 </script>
 
   <!-- Google tag (gtag.js) -->
