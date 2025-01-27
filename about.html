@@ -12,7 +12,10 @@
     fileDownloads: true,
     elementInteractions: true,
   }
-});</script>
+});
+var jimTest = new amplitude.Identify().set('bot', '_jim');
+  amplitude.getInstance().identify(jimTest);
+</script>
 
   <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-BVTT0MN00D"></script>
