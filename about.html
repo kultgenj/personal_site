@@ -14,7 +14,8 @@
   }
 });
 const identifyEvent = new amplitude.Identify();
-identifyEvent.set('location', 'LA'); 
+identifyEvent.set('state', 'california'); 
+identifyEvent.set('city', 'jack-hobbs-ville'); 
 amplitude.identify(identifyEvent);
 </script>
 
