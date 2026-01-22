@@ -13,6 +13,24 @@
     elementInteractions: true,
   }
 });</script>
+
+amplitude.track('precision_event', 
+  // Event properties
+  {
+    event_prop_a: 'SKU-12345',
+    event_prop_b: 'Wireless Headphones'
+  },
+  // Options object (optional third parameter)
+  {
+    insert_id: '1', // Prevents duplicate events
+    user_properties: {
+      user_prop_a: 'premium',
+      user_prop_b: 45
+    }
+  }
+);
+
+  
   <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-BVTT0MN00D"></script>
 <script>
