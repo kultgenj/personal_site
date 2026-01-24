@@ -8,7 +8,6 @@
   window.amplitude.add(window.sessionReplay.plugin({
     sampleRate: 1
   }));
-  window.amplitude.add(window.engagement.plugin());
   window.amplitude.init('f38849850b3306f8879d9eae5f22b7f', {
     "fetchRemoteConfig": true,
     "autocapture": {
@@ -16,7 +15,7 @@
       "fileDownloads": true,
       "formInteractions": true,
       "pageViews": true,
-      "sessions": true,
+      "sessions": false,
       "elementInteractions": true,
       "networkTracking": true,
       "webVitals": true,
