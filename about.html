@@ -3,28 +3,29 @@
 <html>
 
 <head>
+
 <script src="https://cdn.amplitude.com/script/f38849850b3306f8879d9eae5f22b7f.js"></script>
 <script>
-  // Use initAll and pass both sessionReplay and engagement options
-  window.amplitude.initAll('f38849850b3306f8879d9eae5f22b7f', {
-    "fetchRemoteConfig": true,
-    "autocapture": {
-      "attribution": true,
-      "fileDownloads": true,
-      "formInteractions": true,
-      "pageViews": true,
-      "sessions": false,
-      "elementInteractions": true,
-      "networkTracking": true,
-      "webVitals": true,
-      "frustrationInteractions": true
+  window.amplitude.add(window.sessionReplay.plugin({
+    sampleRate: 1
+  }));
+  
+  window.amplitude.init('f38849850b3306f8879d9eae5f22b7f', {
+    fetchRemoteConfig: true,
+    autocapture: {
+      attribution: true,
+      fileDownloads: true,
+      formInteractions: true,
+      pageViews: true,
+      sessions: false,
+      elementInteractions: true,
+      networkTracking: true,
+      webVitals: true,
+      frustrationInteractions: true
     },
-    "sessionReplay": {
-      "sampleRate": 1
-    },
-    "engagement": {}
+    engagement: {
+    }
   });
-</script>
   
 
   <!-- Google tag (gtag.js) -->
