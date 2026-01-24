@@ -5,10 +5,8 @@
 <head>
 <script src="https://cdn.amplitude.com/script/f38849850b3306f8879d9eae5f22b7f.js"></script>
 <script>
-  window.amplitude.add(window.sessionReplay.plugin({
-    sampleRate: 1
-  }));
-  window.amplitude.init('f38849850b3306f8879d9eae5f22b7f', {
+  // Use initAll and pass both sessionReplay and engagement options
+  window.amplitude.initAll('f38849850b3306f8879d9eae5f22b7f', {
     "fetchRemoteConfig": true,
     "autocapture": {
       "attribution": true,
@@ -20,12 +18,13 @@
       "networkTracking": true,
       "webVitals": true,
       "frustrationInteractions": true
-    }
+    },
+    "sessionReplay": {
+      "sampleRate": 1
+    },
+    "engagement": {}
   });
 </script>
-
-<script src="https://cdn.amplitude.com/script/f38849850b3306f8879d9eae5f22b7f.engagement.js"></script>
-<script>amplitude.add(window.engagement.plugin())</script>
   
 
   <!-- Google tag (gtag.js) -->
