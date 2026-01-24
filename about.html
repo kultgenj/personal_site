@@ -8,7 +8,6 @@
   window.amplitude.add(window.sessionReplay.plugin({
     sampleRate: 1
   }));
-  window.amplitude.add(window.engagement.plugin());
   window.amplitude.init('AMPLITUDE_API_KEY', {
     "fetchRemoteConfig": true,
     "autocapture": {
@@ -24,6 +23,9 @@
     }
   });
 </script>
+
+<script src="https://cdn.amplitude.com/script/f38849850b3306f8879d9eae5f22b7f.engagement.js"></script>
+<script>amplitude.add(window.engagement.plugin())</script>
   
 
   <!-- Google tag (gtag.js) -->
