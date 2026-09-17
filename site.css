@@ -18,3 +18,5 @@
 
 
 #analytics-experience[hidden]{display:none!important}
+
+.survey-area{max-width:760px;margin:0 auto 80px}#measurecamp-survey-target{min-height:320px;width:100%;padding:24px;border:1px solid var(--line);border-radius:12px;background:var(--pale)}.survey-placeholder{margin:0;font-size:15px}#measurecamp-survey-target:has(iframe)>.survey-placeholder,#measurecamp-survey-target:has(> :not(.survey-placeholder))>.survey-placeholder{display:none}

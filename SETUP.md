@@ -39,3 +39,5 @@ The About timeline is hidden in the initial HTML. Only an explicit `on` variant 
 Pending Amplitude setup: create `analytics-experience` in each project, keep it off, associate it with a client deployment, and put the matching client deployment keys into `site-config.js`. The Analytics API keys cannot replace these keys. No remote flag has been created or changed. Review the section before any production rollout.
 
 Clean URLs: the builder emits about/index.html, articles/index.html, and privacy/index.html. Legacy .html pages redirect to their folder URLs. Internal navigation and shared assets use root-relative URLs. Restart preview.cjs after server changes.
+
+MeasureCamp survey: /measurecamp-survey/ has the stable embedded-survey target #measurecamp-survey-target. The page is available by direct link and uses the shared Amplitude setup. Configure and publish the survey separately in the matching Amplitude project.
