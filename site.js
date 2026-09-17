@@ -37,14 +37,17 @@
     if (!allowed) return;
     try {
       await load(`https://cdn.amplitude.com/script/${config.amplitudeApiKey}.js`);
-      // The Unified Script includes Web Experiment. Register Guides & Surveys
-      // before Analytics initialization so it shares the correct identity.
+      // Queue our initialization immediately: the Unified Script's async loader
+      // otherwise auto-initializes while the engagement script is downloading.
+      if (window.sessionReplay?.plugin) window.amplitude.add(window.sessionReplay.plugin({ sampleRate: config.replaySampleRate }));
+      const analyticsReady = window.amplitude.init(config.amplitudeApiKey, { autocapture: { ...config.autocapture }, fetchRemoteConfig: config.fetchRemoteConfig }).promise;
+      // Download concurrently, but register only after Analytics is fully ready.
       try {
         await load(`https://cdn.amplitude.com/script/${config.amplitudeApiKey}.engagement.js`);
-        window.amplitude.add(window.engagement.plugin());
-      } catch { console.warn('Guides & Surveys could not load.'); }
-      if (window.sessionReplay?.plugin) window.amplitude.add(window.sessionReplay.plugin({ sampleRate: config.replaySampleRate }));
-      await window.amplitude.init(config.amplitudeApiKey, { autocapture: config.autocapture, fetchRemoteConfig: config.fetchRemoteConfig }).promise;
+        await analyticsReady;
+        await window.amplitude.add(window.engagement.plugin()).promise;
+      } catch (error) { console.warn('Guides & Surveys initialization failed:', error); }
+      await analyticsReady;
       await initializeExperienceFlag();
     } catch { console.warn('Analytics unavailable. Site navigation remains available.'); }
   }
