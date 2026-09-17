@@ -1,0 +1,1 @@
+{"name":"jim-kultgen-personal-site","private":true,"version":"2.0.0","scripts":{"build":"node build-pages.cjs","preview":"node preview.cjs"}}

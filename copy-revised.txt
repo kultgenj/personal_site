@@ -1,0 +1,11 @@
+An analytics career, evolving with AI.
+
+I’m Jim Kultgen, an analytics professional with more than a decade of experience helping teams turn data into decisions. Today, I lead AI Strategy at Amplitude and explore how AI is changing the way we analyze, build, and work.
+
+This is where I share practical ideas, lessons from experience, and what I’m learning along the way.
+
+My work starts with three questions: What are we trying to accomplish? How will we know if we’re successful? What should we do next?
+
+Those questions have guided me through digital analytics, product experimentation, marketing measurement, and analytics engineering. Across roles at Cardinal Path, Kohler, NBC Sports (TeeOff), and CARS.com, I’ve built measurement foundations, introduced experimentation, automated reporting, and completely changed the way organizations leverage data to act.
+
+Today, I’m Head of AI Strategy at Amplitude. I bring that analytics background to an evolving set of questions about AI: where it helps, how it changes our work, and how we measure whether it’s making a difference.
