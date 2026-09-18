@@ -19,6 +19,6 @@
 
 #analytics-experience[hidden]{display:none!important}
 
-.survey-area{max-width:332px;margin:0 auto 80px}#measurecamp-survey-target{width:100%;padding:16px;border:1px solid var(--line);border-radius:12px;background:var(--pale)}.survey-placeholder{margin:0;font-size:15px}#measurecamp-survey-target:has(iframe)>.survey-placeholder,#measurecamp-survey-target:has(> :not(.survey-placeholder):not(.survey-dan-dog))>.survey-placeholder{display:none}
+.survey-area{max-width:332px;margin:0 auto 80px}#measurecamp-survey-target{width:100%;padding:16px;border:1px solid var(--line);border-radius:12px;background:var(--pale)}.survey-placeholder{margin:0;font-size:15px}#measurecamp-survey-target:has(iframe)>:is(.survey-placeholder,.survey-dan-dog),#measurecamp-survey-target:has(> :not(.survey-placeholder):not(.survey-dan-dog))>:is(.survey-placeholder,.survey-dan-dog){display:none}
 
 .survey-dan-dog{display:block;width:100%;height:auto;border-radius:6px;margin:0 0 14px}
