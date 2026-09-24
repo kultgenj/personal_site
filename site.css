@@ -22,3 +22,5 @@
 .survey-area{max-width:332px;margin:0 auto 80px}#measurecamp-survey-target{width:100%;padding:16px;border:1px solid var(--line);border-radius:12px;background:var(--pale)}.survey-placeholder{margin:0;font-size:15px}#measurecamp-survey-target:has(iframe)>:is(.survey-placeholder,.survey-dan-dog),#measurecamp-survey-target:has(> :not(.survey-placeholder):not(.survey-dan-dog))>:is(.survey-placeholder,.survey-dan-dog){display:none}
 
 .survey-dan-dog{display:block;width:100%;height:auto;border-radius:6px;margin:0 0 14px}
+
+header nav{flex-wrap:wrap}@media(max-width:650px){header nav{gap:12px 18px}}

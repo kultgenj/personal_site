@@ -3,7 +3,7 @@ const path = require('node:path');
 const out = path.join(__dirname, 'dist');
 fs.mkdirSync(out, { recursive: true });
 const copy = fs.readFileSync(path.join(__dirname, 'copy-revised.txt'), 'utf8').trim().split(/\r?\n\r?\n/);
-const header = page => `<a class="skip" href="#main">Skip to content</a><header><a class="brand" href="index.html" aria-label="Jim Kultgen home">jim kultgen<span>.</span></a><nav aria-label="Main navigation">${[['index','Home'],['about','About'],['articles','Articles']].map(([id,label])=>`<a href="${id}.html" ${page===id?'aria-current="page"':''}>${label}</a>`).join('')}<a class="nav-connect" href="https://www.linkedin.com/in/jpkultgen/">Say hello ↗</a></nav></header>`;
+const header = page => `<a class="skip" href="#main">Skip to content</a><header><a class="brand" href="/" aria-label="Jim Kultgen home">jim kultgen<span>.</span></a><nav aria-label="Main navigation">${[['index','Home'],['about','About'],['articles','Articles'],['measurecamp-survey/results','Survey results']].map(([id,label])=>`<a href="${id==='index'?'/':'/'+id+'/'}" ${page===id?'aria-current="page"':''}>${label}</a>`).join('')}<a class="nav-connect" href="https://www.linkedin.com/in/jpkultgen/">Say hello ↗</a></nav></header>`;
 const footer = `<footer><div><a class="brand" href="index.html">jim kultgen<span>.</span></a><p>Analytics, with an eye on what’s next.</p></div><div class="footer-right"><div class="footer-links"><a href="https://www.linkedin.com/in/jpkultgen/">LinkedIn ↗</a><a href="https://github.com/kultgenj">GitHub ↗</a><a href="privacy.html">Privacy</a></div><small>© ${new Date().getFullYear()} Jim Kultgen · Personal views.</small></div></footer>`;
 const label = text => `<p class="eyebrow"><span></span>${text}</p>`;
 const portrait = `<div class="portrait-frame"><div class="portrait-top"><span>THE PERSON BEHIND THE SITE</span><span aria-hidden="true">↗</span></div><img src="jim-portrait.jpg" alt="Jim Kultgen" width="350" height="370"><div class="portrait-bottom"><span>Jim Kultgen</span><span>Chicago, IL</span></div><svg class="portrait-sparkline" viewBox="0 0 140 80" aria-hidden="true"><path class="sparkline-baseline" d="M8 69H132"/><path class="sparkline-path" d="M8 62 L20 54 L31 61 L43 45 L54 53 L64 48 L75 56 C90 57 100 48 108 34 C115 22 120 10 124 6"/><circle cx="124" cy="6" r="3"/></svg></div>`;
@@ -53,3 +53,7 @@ fs.writeFileSync(path.join(out,'.nojekyll'),'');
 // Keep the standalone results artifact and its relative image assets together.
 fs.cpSync(path.join(__dirname,'measurecamp-survey','results'),path.join(out,'measurecamp-survey','results'),{recursive:true});
 console.log('Built Home, About, Articles, and Privacy in dist/.');
+
+const resultsPath=path.join(out,'measurecamp-survey','results','index.html');
+const resultsHtml=fs.readFileSync(resultsPath,'utf8').replace(/<!-- SITE HEADER START -->[\s\S]*?<!-- SITE HEADER END -->/, '<!-- SITE HEADER START -->'+header('measurecamp-survey/results')+'<!-- SITE HEADER END -->');
+fs.writeFileSync(resultsPath,resultsHtml);

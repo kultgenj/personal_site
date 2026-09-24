@@ -16,6 +16,7 @@
 <script defer src="/site.js"></script>
 </head>
 <body>
+<!-- SITE HEADER START --><a class="skip" href="#main">Skip to content</a><header><a class="brand" href="/" aria-label="Jim Kultgen home">jim kultgen<span>.</span></a><nav aria-label="Main navigation"><a href="/" >Home</a><a href="/about/" >About</a><a href="/articles/" >Articles</a><a href="/measurecamp-survey/results/" aria-current="page">Survey results</a><a class="nav-connect" href="https://www.linkedin.com/in/jpkultgen/">Say hello ↗</a></nav></header><!-- SITE HEADER END -->
 <style>
 /* ===========================================================
    MeasureCamp AI at Work — survey results
@@ -355,7 +356,7 @@ body{
   </div>
 </nav>
 
-<main class="asset-shell">
+<main id="main" class="asset-shell">
 
   <div class="asset-mast">
     <p class="asset-eyebrow">MeasureCamp Chicago 2026 &middot; Survey results</p>
@@ -369,10 +370,7 @@ body{
     <div class="asset-stat"><b>100%</b><span>Like dogs</span></div>
   </div>
 
-  <figure class="asset-room-photo">
-    <img src="./measurecamp-room.jpg" alt="Jim leading a discussion with attendees seated around tables at MeasureCamp Chicago" loading="eager">
-    <figcaption>Talking AI at work at MeasureCamp Chicago, September 2026.</figcaption>
-  </figure>
+
 
   <div id="asset-report"></div>
 
@@ -569,6 +567,7 @@ var html = SECTIONS.map(function(s){
     + '<div class="asset-sechead"><h2 class="asset-h2" id="h-' + s.id + '">' + esc(s.title) + '</h2></div>'
     + (s.note ? '<p class="asset-note">' + esc(s.note) + '</p>' : '')
     + '<div class="asset-grid">' + s.questions.map(questionHTML).join("") + '</div>'
+    + (s.id === 'room' ? "  <figure class=\"asset-room-photo\">\n    <img src=\"./measurecamp-room.jpg\" alt=\"Jim leading a discussion with attendees seated around tables at MeasureCamp Chicago\" loading=\"eager\">\n    <figcaption>Talking AI at work at MeasureCamp Chicago, September 2026.</figcaption>\n  </figure>" : '')
     + '</section>';
 }).join("");
 
