@@ -41,3 +41,5 @@ Pending Amplitude setup: create `analytics-experience` in each project, keep it 
 Clean URLs: the builder emits about/index.html, articles/index.html, and privacy/index.html. Legacy .html pages redirect to their folder URLs. Internal navigation and shared assets use root-relative URLs. Restart preview.cjs after server changes.
 
 MeasureCamp survey: /measurecamp-survey/ has the stable embedded-survey target #measurecamp-survey-target. The page is available by direct link and uses the shared Amplitude setup. Configure and publish the survey separately in the matching Amplitude project.
+
+Survey results source: measurecamp-survey/results/ (standalone HTML plus photos). The builder copies the directory into dist at the same path. Edit this repository copy going forward; the original sibling ai-at-work-survey folder is retained as a draft. Results are a static snapshot, not a live API query.

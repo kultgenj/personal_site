@@ -50,4 +50,6 @@ for(const [name,page] of Object.entries(pages)) {
 }
 for(const file of ['site.css','site.js','site-config.js','favicon-head-transparent.png','jim-portrait.jpg','jim-speaking.jpg','jim-discussion.jpg','jim-listening.jpg','dan-dog.jpg','CNAME']) fs.copyFileSync(path.join(__dirname,file),path.join(out,file));
 fs.writeFileSync(path.join(out,'.nojekyll'),'');
+// Keep the standalone results artifact and its relative image assets together.
+fs.cpSync(path.join(__dirname,'measurecamp-survey','results'),path.join(out,'measurecamp-survey','results'),{recursive:true});
 console.log('Built Home, About, Articles, and Privacy in dist/.');
