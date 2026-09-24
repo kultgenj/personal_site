@@ -24,3 +24,5 @@
 .survey-dan-dog{display:block;width:100%;height:auto;border-radius:6px;margin:0 0 14px}
 
 header nav{flex-wrap:wrap}@media(max-width:650px){header nav{gap:12px 18px}}
+
+.footer-links{flex-wrap:wrap}
